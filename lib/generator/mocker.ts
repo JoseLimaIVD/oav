@@ -44,6 +44,10 @@ export default class Mocker {
       return new Date().toISOString().split("T")[0];
     }
 
+    if (paramSpec.format == "time") {
+      return new Date().toISOString().split("T")[1];
+    }
+
     if (paramSpec.format === "date-time") {
       return new Date().toISOString();
     }
